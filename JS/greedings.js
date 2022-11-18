@@ -10,10 +10,10 @@ const USERNAME_KEY = "username";
 //로그인
 function loginSubmit(event) {
   event.preventDefault(); //submit 디폴트값이 적용되지 않게하는 함수
-  const username = loginInput.value; //오류시 알림을 받기 위한 변수선언
-  localStorage.setItem(USERNAME_KEY, username); //username을 로컬스토리지에 set
+  const userWroteName = loginInput.value; //오류시 알림을 받기 위한 변수선언, 유저인풋값
+  localStorage.setItem(USERNAME_KEY, userWroteName); //username을 로컬스토리지에 set
   loginForm.classList.add(HIDDEN_CLASSNAME); //로그인 폼 숨김
-  paintGreeding(username); //환영인사 출력
+  paintGreeding(userWroteName); //환영인사 출력
 }
 
 //로그아웃
