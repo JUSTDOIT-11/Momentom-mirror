@@ -12,4 +12,4 @@ function getClock() {
 }
 
 getClock(); // 아래 코드만 적으면 새로고침시 1초 뒤에 값이 출력되므로 즉시 출력되는 코드 한줄
-setInterval(getClock, 100000000);
+setInterval(getClock, 1000);
