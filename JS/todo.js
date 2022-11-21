@@ -10,16 +10,19 @@ function saveToDos() {
   localStorage.setItem(TODO_KEY, JSON.stringify(toDos)); //toDos Array에 들어가는 값음 "값"(text)의 형태로 들어가게 하기위함.
 }
 
-//deleteToDo()로 하고, const deleteList = this.parentElement; 로 해도 동작함 -> why?
+//로컬스토리지에서의 삭제코드는 '삭제하고자하는 오브젝트를 제외한 오브젝트로 구성된 배열'을 다시 생성하고 그 배열을 '다시 로드'하는 방식임. = "삭제"가 아닌 "새로운 배열을 로드"
 function deleteToDo(event) {
   const deleteList = event.target.parentElement; // 삭제하려는 내용이 담긴 list가 button(and span)의 부모엘리먼트 이므로
   deleteList.remove();
+  toDos = toDos.filter((todo) => todo.id !== parseInt(deleteList.id)); //todos.id와 deleteList의 id가 다른 오브젝트로 배열을 재생성
+  saveToDos(); // 윗줄로 재생성된 배열을 로컬스토리지에 다시 set한다.
 }
 
 function paintToDo(newTodo) {
   const doList = document.createElement("li");
+  doList.id = newTodo.id;
   const doListSpan = document.createElement("span");
-  doListSpan.innerText = newTodo; //paintToDo 함수는 toDoSubmit 함수에서 실행되기 때문에 toDoSubmit함수에 선언한 newTodo변수를 사용함
+  doListSpan.innerText = newTodo.Text; // 39번줄에서 오브젝트를 함수로 push했기 때문에 newTodo = newTodoObj 이다.(대신 함수인자도 newTodoObj로 바꿔줘야함!)
   const deleteButton = document.createElement("button");
   deleteButton.innerText = "❌";
   deleteButton.addEventListener("click", deleteToDo); //지우기버튼을 눌렀을때 해당 함수 실행
@@ -31,8 +34,12 @@ function toDoSubmit(event) {
   event.preventDefault();
   const newTodo = toDoInput.value;
   toDoInput.value = ""; //인풋텍스트를 받은 후 비워내기위함, 윗줄의 newTodo와는 별개
-  toDos.push(newTodo);
-  paintToDo(newTodo);
+  const newTodoObj = {
+    Text: newTodo,
+    id: Date.now(), //랜덤한 수를 뽑아내기 위함
+  };
+  toDos.push(newTodoObj); //배열에 오브젝트를 push함.
+  paintToDo(newTodoObj); //함수에 오브젝트를 push함.
   saveToDos();
 }
 
