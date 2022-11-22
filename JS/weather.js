@@ -1,4 +1,6 @@
+//여긴 전부 다 공부해야겠다...
 const API_KEY = "fd3fcc2a19edc0fb2ce2255ab05109f2";
+
 function geoOk(position) {
   const lat = position.coords.latitude;
   const lon = position.coords.longitude;
