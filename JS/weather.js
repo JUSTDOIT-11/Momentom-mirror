@@ -18,7 +18,7 @@ function geoOk(position) {
 }
 
 function geoErr() {
-  alert("Can't get your Position ㅠㅜ");
+  //alert("Can't get your Position ㅠㅜ");
 }
 
 navigator.geolocation.getCurrentPosition(geoOk, geoErr);
