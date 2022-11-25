@@ -143,3 +143,12 @@ input {
 input::placeholder {
   color: white;
 }
+
+button {
+  background: none;
+  border: none;
+}
+
+button:hover {
+  cursor: pointer;
+}

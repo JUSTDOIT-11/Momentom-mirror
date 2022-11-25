@@ -8,12 +8,13 @@ function geoOk(position) {
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
-      const showCity = document.querySelector(".weather span:first-child");
-      const showWeather = document.querySelector(".weather span:nth-child(2)");
-      const showTemp = document.querySelector(".weather span:last-child");
-      showCity.innerText = data.name;
+      const showWeather = document.querySelector(".weather span:first-child");
+      const showTemp = document.querySelector(".weather span:nth-child(2)");
+      const showCity = document.querySelector(".weather span:last-child");
+      const temp = data.main.temp;
+      showTemp.innerText = `${Math.round(temp)}℃`;
       showWeather.innerText = data.weather[0].main;
-      showTemp.innerText = data.main.temp;
+      showCity.innerText = data.name;
     });
 }
 

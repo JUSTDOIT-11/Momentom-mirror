@@ -21,6 +21,7 @@ function deleteToDo(event) {
 function paintToDo(newTodo) {
   const doList = document.createElement("li");
   doList.id = newTodo.id;
+  doList.classList = "todo-list-li";
   const doListSpan = document.createElement("span");
   doListSpan.innerText = newTodo.Text; // 39번줄에서 오브젝트를 함수로 push했기 때문에 newTodo = newTodoObj 이다.(대신 함수인자도 newTodoObj로 바꿔줘야함!)
   const deleteButton = document.createElement("button");

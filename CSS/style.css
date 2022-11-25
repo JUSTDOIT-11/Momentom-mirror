@@ -1,5 +1,5 @@
 @import "reset.css";
-/*option*/
+/*classList*/
 .hidden {
   display: none;
 }
@@ -12,7 +12,6 @@ body {
   justify-content: center;
 }
 
-/*something*/
 .background-images {
   position: absolute;
   width: 100%;
@@ -29,16 +28,16 @@ body {
   font-size: 150px;
   font-weight: 800;
   color: white;
-  margin: 0px;
+  padding-bottom: 7px;
 }
 
+/*login - logout*/
+
 .login-form input {
-  width: 250px;
+  width: 260px;
   height: 50px;
   font-size: 30px;
   font-weight: 600;
-
-  margin-top: 20px;
 }
 
 .login-form input::placeholder {
@@ -46,15 +45,89 @@ body {
   font-weight: 600;
 }
 
-.todo-form input {
+.login-button {
+  height: 54px;
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+}
+
+.logout {
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+}
+
+#greeding {
+  font-size: 30px;
+  font-weight: 600;
+  color: white;
   margin-top: 20px;
-  width: 190px;
+}
+
+/*todo*/
+
+.todo-form input {
+  margin-top: 15px;
+  margin-bottom: 7px;
+  width: 220px;
   height: 30px;
   font-weight: 600;
-  font-size: 13px;
+  font-size: 15px;
 }
 
 .todo-form input::placeholder {
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 600;
+}
+
+.todo-list-li {
+  width: 60px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-weight: 600;
+  font-size: 15px;
+  color: white;
+}
+
+.todo-list-li button {
+  font-size: 15px;
+  padding: 0px 2px;
+}
+
+/*quote*/
+
+.quote {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  position: absolute;
+  bottom: 25px;
+}
+
+.quote span:first-child {
+  font-size: 18px;
+  margin-bottom: 7px;
+}
+
+/*weather*/
+
+.weather {
+  position: absolute;
+  top: 15px;
+  right: 17px;
+  font-weight: 600;
+  font-size: 15px;
+  color: white;
+}
+
+.weather span:last-child {
+  display: block;
+  letter-spacing: 6px;
 }
