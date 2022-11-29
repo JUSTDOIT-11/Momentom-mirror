@@ -1,0 +1,40 @@
+@keyframes Appearance {
+  0% {
+    opacity: 0%;
+    transform: translateY(10px);
+  }
+  50% {
+    opacity: 50%;
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes quoteAppearance {
+  0% {
+    opacity: 0%;
+    transform: translateY(10px);
+  }
+  30% {
+    opacity: 100%;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes weatherTwinkle {
+  0% {
+    opacity: 100%;
+  }
+  50% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}

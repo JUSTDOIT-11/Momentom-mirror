@@ -23,7 +23,7 @@ function logoutOption(event) {
   logoutBtn.classList.add(HIDDEN_CLASSNAME); //로그아웃 버튼 숨김
   greeding.classList.add(HIDDEN_CLASSNAME); //환영인사 숨김
   loginForm.classList.remove(HIDDEN_CLASSNAME); //로그인폼 다시 출력
-  //loginInput.value = ""  : 로그인폼으로 돌아갔을 때 인풋칸에 전 사용자 이름이 그대로 있는것을 지우는
+  loginInput.value = ""; // 로그인폼으로 돌아갔을 때 인풋칸에 전 사용자 이름이 그대로 있는것을 지우는
   //window.location.reload();  : 위에 3줄 대신 페이지 리로드하는 방법
 }
 
