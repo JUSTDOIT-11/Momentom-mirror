@@ -146,3 +146,44 @@ body {
   display: block;
   letter-spacing: 6px;
 }
+
+/*option*/
+
+.cog {
+  font-size: 20px;
+  color: white;
+  position: absolute;
+  bottom: 15px;
+  left: 10px;
+  transition: transform 1s ease-in-out;
+}
+
+.cog:hover {
+  cursor: pointer;
+  transform: rotateZ(90deg);
+}
+
+.arrow-box {
+  position: absolute;
+  width: 700px;
+  height: 500px;
+  left: 10px;
+  bottom: 70px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  background-color: white;
+  opacity: 70%;
+  animation: arrowBoxAppearance 0.5s ease-in-out;
+}
+
+.arrow-box:after {
+  content: "";
+  position: absolute;
+  border-top: 30px solid white;
+  border-left: 8px solid transparent;
+  border-right: 22px solid transparent;
+  border-bottom: 0px solid transparent;
+  bottom: -16px;
+  left: 12px;
+}

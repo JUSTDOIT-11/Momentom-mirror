@@ -29,12 +29,22 @@
 
 @keyframes weatherTwinkle {
   0% {
-    opacity: 100%;
+    color: white;
   }
   50% {
-    opacity: 0%;
+    color: black;
   }
   100% {
-    opacity: 100%;
+    color: white;
+  }
+}
+
+@keyframes arrowBoxAppearance {
+  from {
+    opacity: 0%;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 70%;
   }
 }
