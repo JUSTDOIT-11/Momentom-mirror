@@ -160,7 +160,6 @@ body {
 
 .cog:hover {
   cursor: pointer;
-  transform: rotateZ(90deg);
 }
 
 .arrow-box {
