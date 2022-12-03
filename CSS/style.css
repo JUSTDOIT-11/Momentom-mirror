@@ -4,6 +4,7 @@
 .hidden {
   display: none;
 }
+
 /*CSS*/
 body {
   height: 100vh;
@@ -59,20 +60,6 @@ body {
 .login-button:hover {
   text-decoration: underline;
   animation: buttonHover 0.5 ease-in-out;
-}
-
-.logout {
-  position: absolute;
-  top: 15px;
-  left: 10px;
-  font-size: 15px;
-  font-weight: 600;
-  color: white;
-  animation: Appearance 1s ease-in-out;
-}
-
-.logout:hover {
-  text-decoration: underline;
 }
 
 #greeding {
@@ -147,7 +134,7 @@ body {
   letter-spacing: 6px;
 }
 
-/*option*/
+/*optionbox*/
 
 .cog {
   font-size: 20px;
@@ -162,27 +149,68 @@ body {
   cursor: pointer;
 }
 
+[hidden] {
+  display: none !important;
+}
+
 .arrow-box {
+  display: flex;
   position: absolute;
   width: 700px;
   height: 500px;
   left: 10px;
   bottom: 70px;
+  opacity: 95%;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px;
   background-color: white;
-  opacity: 70%;
-  animation: arrowBoxAppearance 0.5s ease-in-out;
+  animation: arrowBoxAppearance 0.2s ease-in-out;
 }
 
 .arrow-box:after {
   content: "";
   position: absolute;
-  border-top: 30px solid white;
+  border-top: 22px solid white;
   border-left: 8px solid transparent;
   border-right: 22px solid transparent;
   border-bottom: 0px solid transparent;
-  bottom: -16px;
+  bottom: -22px;
   left: 12px;
+}
+
+.option-leftbox {
+  margin-left: 20px;
+  margin-top: 25px;
+  width: 200px;
+  height: 450px;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.option-list li {
+  margin-bottom: 15px;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 17px;
+}
+
+.logout {
+  position: absolute;
+  bottom: 15px;
+  left: 12px;
+  padding: 10px 35px;
+  border-radius: 20px;
+  background-color: green;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+}
+
+.logout:hover {
+  opacity: 80%;
+  transform: scale(1.02);
+}
+
+.option-rightbox {
+  margin-left: 20px;
+  margin-top: 25px;
 }
