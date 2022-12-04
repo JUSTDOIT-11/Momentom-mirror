@@ -297,6 +297,11 @@ body {
   cursor: pointer;
 }
 
+.switch:checked:hover {
+  background-color: rgba(0, 128, 0, 0.8);
+  cursor: pointer;
+}
+
 .switch::before {
   content: "";
   position: absolute;
